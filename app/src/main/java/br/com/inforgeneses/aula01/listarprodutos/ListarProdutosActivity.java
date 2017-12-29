@@ -26,12 +26,20 @@ public class ListarProdutosActivity extends BaseActivity implements ListarProdut
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        presenter = new ListarProdutosPresenter();
+
         lista = findViewById(R.id.Lista);
         btnNovo = findViewById(R.id.BtnNovo);
 
         configuraBotaoCadastrar();
+    }
 
-        presenter = new ListarProdutosPresenter();
+    private void configuraBotaoCadastrar() {
+        btnNovo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                presenter.cadastrar();
+            }
+        });
     }
 
     @Override
@@ -43,12 +51,10 @@ public class ListarProdutosActivity extends BaseActivity implements ListarProdut
         lista.setAdapter(arrayAdapter);
     }
 
-    public void configuraBotaoCadastrar() {
-        btnNovo.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                startActivity(new Intent(ListarProdutosActivity.this, CadastrarProdutoActivity.class));
-            }
-        });
+    @Override
+    public void navegarParaCadastro() {
+        Intent intent = new Intent(ListarProdutosActivity.this, CadastrarProdutoActivity.class);
+        startActivity(intent);
     }
 
     @Override

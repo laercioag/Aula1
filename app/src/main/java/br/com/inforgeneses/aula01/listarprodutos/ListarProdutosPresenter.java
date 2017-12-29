@@ -53,4 +53,9 @@ public class ListarProdutosPresenter implements ListarProdutosContract.Presenter
             }
         });
     }
+
+    @Override
+    public void cadastrar() {
+        view.navegarParaCadastro();
+    }
 }

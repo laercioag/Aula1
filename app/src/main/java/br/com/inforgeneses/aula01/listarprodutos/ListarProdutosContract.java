@@ -12,11 +12,15 @@ public interface ListarProdutosContract {
 
        void listarProdutos(List<Produto> produtos);
 
+       void navegarParaCadastro();
+
     }
 
     interface Presenter extends BasePresenter<View> {
 
         void carregarProdutos();
+
+        void cadastrar();
 
     }
 }
