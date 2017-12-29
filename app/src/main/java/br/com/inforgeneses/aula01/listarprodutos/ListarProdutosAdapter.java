@@ -1,4 +1,4 @@
-package br.com.inforgeneses.aula01_.custom;
+package br.com.inforgeneses.aula01.listarprodutos;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,15 +11,15 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import br.com.inforgeneses.aula01_.R;
-import br.com.inforgeneses.aula01_.modelo.Produto;
+import br.com.inforgeneses.aula01.R;
+import br.com.inforgeneses.aula01.data.Produto;
 
-public class ProdutoCustom extends ArrayAdapter{
+public class ListarProdutosAdapter extends ArrayAdapter{
 
     private final int layout;
     private LayoutInflater inflater;
 
-    public ProdutoCustom (Context contexto, int layout, List<Produto> lista) {
+    public ListarProdutosAdapter(Context contexto, int layout, List<Produto> lista) {
         super(contexto, layout, lista);
         this.inflater = LayoutInflater.from(contexto);
         this.layout = layout;

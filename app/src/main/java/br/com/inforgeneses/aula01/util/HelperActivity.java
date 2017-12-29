@@ -1,13 +1,8 @@
-package br.com.inforgeneses.aula01_.helper;
+package br.com.inforgeneses.aula01.util;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import br.com.inforgeneses.aula01_.form.ProdutoCreate;
-
-/**
- * Created by Desenvolvimento on 30/11/2017.
- */
 
 public class HelperActivity {
     private Context contexto;

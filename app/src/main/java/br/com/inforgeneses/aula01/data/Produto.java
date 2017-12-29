@@ -1,4 +1,4 @@
-package br.com.inforgeneses.aula01_.modelo;
+package br.com.inforgeneses.aula01.data;
 
 import java.io.Serializable;
 
@@ -16,7 +16,7 @@ public class Produto extends SugarRecord implements Serializable, Parcelable {
     @SerializedName("nome")
     @Expose
     private String nome;
-    @SerializedName("descricao")
+    @SerializedName("Descricao")
     @Expose
     private String descricao;
     @SerializedName("preco")
@@ -24,10 +24,7 @@ public class Produto extends SugarRecord implements Serializable, Parcelable {
     private Double preco;
     public final static Parcelable.Creator<Produto> CREATOR = new Creator<Produto>() {
 
-
-        @SuppressWarnings({
-                "unchecked"
-        })
+        @SuppressWarnings({"unchecked"})
         public Produto createFromParcel(Parcel in) {
             return new Produto(in);
         }
@@ -39,7 +36,7 @@ public class Produto extends SugarRecord implements Serializable, Parcelable {
     };
     private final static long serialVersionUID = -7666771969215594768L;
 
-    protected Produto(Parcel in) {
+    private Produto(Parcel in) {
         this.nome = ((String) in.readValue((String.class.getClassLoader())));
         this.descricao = ((String) in.readValue((String.class.getClassLoader())));
         this.preco = ((Double) in.readValue((String.class.getClassLoader())));

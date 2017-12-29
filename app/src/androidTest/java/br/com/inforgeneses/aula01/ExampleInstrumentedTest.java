@@ -1,4 +1,4 @@
-package br.com.inforgeneses.aula01_;
+package br.com.inforgeneses.aula01;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

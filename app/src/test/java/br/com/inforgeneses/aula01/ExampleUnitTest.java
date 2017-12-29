@@ -1,4 +1,4 @@
-package br.com.inforgeneses.aula01_;
+package br.com.inforgeneses.aula01;
 
 import org.junit.Test;
 

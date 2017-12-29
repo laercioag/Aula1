@@ -1,4 +1,4 @@
-package br.com.inforgeneses.aula01_.form;
+package br.com.inforgeneses.aula01.cadastrarproduto;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,11 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import br.com.inforgeneses.aula01_.R;
-import br.com.inforgeneses.aula01_.helper.HelperActivity;
-import br.com.inforgeneses.aula01_.modelo.Produto;
+import br.com.inforgeneses.aula01.R;
+import br.com.inforgeneses.aula01.util.HelperActivity;
+import br.com.inforgeneses.aula01.data.Produto;
 
-public class ProdutoCreate extends AppCompatActivity {
+public class CadastrarProdutoActivity extends AppCompatActivity {
 
     private EditText nome, descricao, preco;
     private Button salvar;
@@ -47,13 +47,13 @@ public class ProdutoCreate extends AppCompatActivity {
 
             v.setMensagem("Salvo com sucesso");
             v.setCont(Toast.LENGTH_SHORT);
-            v.setContexto(ProdutoCreate.this);
+            v.setContexto(CadastrarProdutoActivity.this);
             v.mensagem();
-            //Toast.makeText(ProdutoCreate.this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(CadastrarProdutoActivity.this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
             finish();
 
         }catch (Exception e){
-            Toast.makeText(ProdutoCreate.this, "Ocorreu um problema ao salvar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(CadastrarProdutoActivity.this, "Ocorreu um problema ao salvar", Toast.LENGTH_SHORT).show();
         }
     }
 
