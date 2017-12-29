@@ -3,11 +3,9 @@ package br.com.inforgeneses.aula01.data.source.remote;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.util.Collection;
 import java.util.List;
 
 import br.com.inforgeneses.aula01.data.Produto;
-import br.com.inforgeneses.aula01.util.CustomDeserializer;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -27,7 +25,6 @@ public class ProdutoRemoteDataSource {
     private static OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
     private static Gson gson = new GsonBuilder()
-            .registerTypeAdapter(Collection.class, new CustomDeserializer())
             .create();
 
     private static Retrofit retrofit = new Retrofit.Builder()
