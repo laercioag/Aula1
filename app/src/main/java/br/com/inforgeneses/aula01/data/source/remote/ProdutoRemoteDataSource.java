@@ -1,8 +1,5 @@
 package br.com.inforgeneses.aula01.data.source.remote;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import java.util.List;
 
 import br.com.inforgeneses.aula01.data.Produto;
@@ -24,13 +21,10 @@ public class ProdutoRemoteDataSource {
 
     private static OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
-    private static Gson gson = new GsonBuilder()
-            .create();
-
     private static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(client)
-            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(GsonConverterFactory.create())
             .build();
 
     private static ProdutosService service = null;
