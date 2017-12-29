@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.inforgeneses.aula01_.form.ProdutoCreate">
+
+    <EditText
+        android:id="@+id/Nome"
+        android:hint="Nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/Descricao"
+        android:hint="Informe a descrição"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Nome"
+        />
+
+    <EditText
+        android:id="@+id/Preco"
+        android:hint="ex.: R$ 2.00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Descricao"
+        />
+
+    <Button
+        android:id="@+id/Salvar"
+        android:hint="@string/descricao_salvar"
+        style="@style/BtnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
